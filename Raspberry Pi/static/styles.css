@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.camera {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.camera-display {
+  width: 320px;
+  height: 240px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.camera-display img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thermal-camera-display {
+  width: 320px;
+  height: 240px;
+  border: 1px solid black;
+}
+
+.thermal-camera-display img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.check-text {
+  display: none; /* Initially hide the check text */
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.active {
+  background-color: green;
+  color: white;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.direction-controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-side-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-side-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  margin: 5px;
+}

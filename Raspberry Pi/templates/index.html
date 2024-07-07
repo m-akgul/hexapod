@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="camera">
+      <div class="camera-display" id="camera-display">
+        <img id="camera-feed" src="{{ url_for('video_feed') }}" alt="Camera Feed">
+      </div>
+      <div class="thermal-camera-display" id="thermal-camera-display">
+        <img src="{{ url_for('thermal_video_feed') }}" class='video'>
+      </div>
+      <div class="check-text" id="check">Check please</div>
+    </div>
+    <div class="controls">
+      <div class="mode-controls">
+        <button id="manual" class="mode">Manual</button>
+        <button id="automatic" class="mode">Automatic</button>
+      </div>
+      <div class="direction-controls">
+        <button id="forward">⬆</button>
+        <div class="left-side-controls">
+          <button id="left-forward">⬅⬆</button>
+          <button id="right-forward">⬆➡</button>
+        </div>
+        <button id="stop">⏹</button>
+        <div class="right-side-controls">
+          <button id="left-backward">⬅⬇</button>
+          <button id="right-backward">⬇➡</button>
+        </div>
+        <button id="backward">⬇</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
